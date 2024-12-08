@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: background-color 0s, color 0s;
+}
+
+:root {
+  --bg-primary: rgb(244, 251, 237);
+  --text-primary: #000;
+  --link-color: #0066cc;
+  --link-hover: #004080;
+  --border-color: #cb6552;
+}
+
+:root.dark-theme {
+  --bg-primary: #121212;
+  --text-primary: #e0e0e0;
+  --link-color: #4da6ff;
+  --link-hover: #80c1ff;
+  --border-color: #ff6b6b;
+  .pronounce-btn {
+    background-image: url("images/pronounce-dark.png");
+  }
+  .pronounce-btn:active {
+    background-image: url("images/pronounce-hover-dark.png");
+  }
+
+  @media (hover: hover) {
+    .pronounce-btn:hover {
+      background-image: url("images/pronounce-hover-dark.png");
+    }
+  }
+}
+
+body {
+  font-family: "Source Code Pro", monospace;
+  padding: 2em 0.5em 1em 0.5em;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color 0s;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: 3px solid #cb6552;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0s;
+  height: 2rem;
+  width: 2.05rem;
+  font-size: 1.7rem;
+  line-height: 1.05;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin: 0;
+}
+
+.intro-container {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin: 0.5em 0;
+  gap: 0.5em;
+}
+
+.intro {
+  padding-top: 1em;
+}
+
+.intro p {
+  height: 2rem;
+}
+
+p {
+  margin: 0.5rem;
+}
+
+p span {
+  padding-top: 1.5em;
+}
+
+a:has(img) {
+  display: flex;
+  justify-content: start;
+  padding: 0.25em 0.5em 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  line-height: 1.8rem;
+  padding: 0 0.3em;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+#youtube-iframe,
+#video-placeholder {
+  width: 90vw;
+  aspect-ratio: 3/1.7;
+  border-radius: 0.7rem;
+  border: 3px solid var(--border-color);
+  margin-top: 2rem;
+  background-image: url("images/video-placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#youtube-iframe {
+  display: none;
+}
+
+#video-placeholder {
+  display: block;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.pronounce-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/pronounce.png");
+  background-size: 100%;
+  touch-action: manipulation;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.pronounce-btn:active {
+  background-image: url("images/pronounce-hover.png");
+  transform: scale(1.5);
+  margin-left: 0.5rem;
+}
+
+@media (hover: hover) {
+  .pronounce-btn:hover {
+    background-image: url("images/pronounce-hover.png");
+    transform: scale(1.5);
+    margin-left: 0.5rem;
+  }
+
+  .theme-toggle:hover,
+  .icon:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 3em auto;
+    padding: 0 3rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 4rem;
+  }
+
+  .theme-toggle {
+    top: 1rem;
+    right: 1rem;
+  }
+  #youtube-iframe,
+  #video-placeholder {
+    width: 30rem;
+  }
+}

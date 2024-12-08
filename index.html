@@ -1,0 +1,161 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shant</title>
+  </head>
+  <body>
+    <button class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    <h1>Shant Dashjian</h1>
+    <div class="container">
+      <div class="text">
+        <div class="intro-container">
+          <img
+            src="images/hello.png"
+            alt="hello"
+            height="88"
+            width="88"
+            class="hello"
+          />
+          <div class="intro">
+            <p class="name">
+              - I'm Shant
+              <button
+                class="pronounce-btn"
+                onclick="document.getElementById('pronounce-shant').play()"
+              ></button>
+              <audio
+                id="pronounce-shant"
+                src="/sounds/pronounce-shant.mp3"
+              ></audio>
+            </p>
+            <p>- I enjoy programming and teaching.</p>
+            <p>
+              - I'm a teacher at
+              <a href="https://scrimba.com/home?coupon=SHANT50" target="_blank"
+                >Scrimba</a
+              >.
+            </p>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <a href="https://procodingmentor.com" target="_blank"
+              ><img
+                id="calendar-img"
+                class="icon"
+                src="images/calendar.png"
+                alt="book a session"
+                height="21"
+                width="21"
+            /></a>
+            <span
+              >Book a mentoring session with me at
+              <a href="https://procodingmentor.com" target="_blank"
+                >Pro Coding Mentor</a
+              ></span
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.coursera.org/learn/intro-to-claude-ai"
+              target="_blank"
+              ><img
+                class="icon"
+                src="images/course.png"
+                alt="take my course"
+                height="21"
+                width="21"
+            /></a>
+            <span
+              >Take my free Claude AI course on
+              <a
+                href="https://www.coursera.org/learn/intro-to-claude-ai"
+                target="_blank"
+                >Coursera</a
+              >,
+              <a href="https://scrimba.com/claude-ai-c09gsmkso3" target="_blank"
+                >Scrimba</a
+              >, and
+              <a
+                href="https://www.youtube.com/watch?v=QfJB9d0J3Iw"
+                target="_blank"
+                >freeCodeCamp</a
+              ></span
+            >
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@shantdashjian" target="_blank"
+              ><img
+                class="icon"
+                src="images/youtube.png"
+                alt="youtube"
+                height="21"
+                width="21"
+            /></a>
+            <span
+              >Learn with my
+              <a href="https://www.youtube.com/@shantdashjian" target="_blank"
+                >YouTube Channel</a
+              ></span
+            >
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/shantdashjian/" target="_blank"
+              ><img
+                class="icon"
+                src="images/linkedin.png"
+                alt="linkedin"
+                height="21"
+                width="21"
+            /></a>
+            <span
+              >Connect with me on
+              <a
+                href="https://www.linkedin.com/in/shantdashjian/"
+                target="_blank"
+                >LinkedIn</a
+              ></span
+            >
+          </li>
+          <li>
+            <a href="https://github.com/shantdashjian" target="_blank"
+              ><img
+                id="github-img"
+                class="icon"
+                src="images/github.png"
+                alt="github"
+                height="21"
+                width="21"
+            /></a>
+            <span
+              >Check out my
+              <a href="https://github.com/shantdashjian" target="_blank"
+                >GitHub portfolio</a
+              ></span
+            >
+          </li>
+        </ul>
+      </div>
+      <iframe
+        id="youtube-iframe"
+        src="https://www.youtube.com/embed/QfJB9d0J3Iw"
+        title="Learn Claude AI – Build Text Summarizers, Image Describers, and More with the Anthropic API"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <div id="video-placeholder"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
