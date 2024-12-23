@@ -163,10 +163,13 @@ button:hover {
   cursor: pointer;
 }
 
-.name {
+.top-details {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+}
+
+.space-before {
+  margin-left: 0.6em;
 }
 
 .pronounce-btn {
