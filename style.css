@@ -38,7 +38,8 @@
 
 body {
   font-family: "Source Code Pro", monospace;
-  padding: 2em 0.5em 1em 0.5em;
+  margin: 3em auto;
+  padding: 0 2.5rem;
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -89,6 +90,10 @@ li {
   margin: 0;
 }
 
+.text, .videos {
+  width: 100%;
+}
+
 .intro-container {
   list-style: none;
   display: flex;
@@ -127,23 +132,25 @@ h1 {
   margin-bottom: 0;
 }
 
-#youtube-iframe,
-#video-placeholder {
-  width: 90vw;
+.youtube-iframe {
+  width: 100%;
   aspect-ratio: 3/1.7;
   border-radius: 0.7rem;
   border: 3px solid var(--border-color);
   margin-top: 2rem;
-  background-image: url("images/video-placeholder.jpg");
   background-size: cover;
   background-position: center;
 }
 
-#youtube-iframe {
-  display: none;
+#vite-youtube-iframe {
+  background-image: url("images/vite-video-placeholder.png");
 }
 
-#video-placeholder {
+#claude-ai-youtube-iframe {
+  background-image: url("images/claude-ai-video-placeholder.jpg");
+}
+
+.youtube-iframe {
   display: block;
 }
 
@@ -203,11 +210,7 @@ button:hover {
   }
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    margin: 3em auto;
-    padding: 0 2.5rem;
-  }
+@media screen and (min-width: 1100px) {
 
   .container {
     display: flex;
@@ -215,14 +218,11 @@ button:hover {
     justify-content: space-between;
     align-items: start;
     margin-top: 4rem;
+    gap: 1.5em;
   }
 
   .theme-toggle {
     top: 1rem;
     right: 1rem;
-  }
-  #youtube-iframe,
-  #video-placeholder {
-    width: 30rem;
   }
 }

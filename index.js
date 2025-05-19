@@ -44,32 +44,3 @@ systemPrefersDark.addListener((e) => {
     setTheme(e.matches ? "dark" : "light");
   }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const iframe = document.getElementById("youtube-iframe");
-  const placeholder = document.getElementById("video-placeholder");
-
-  // More reliable method to check iframe loading
-  iframe.onload = () => {
-    placeholder.style.display = "none";
-    iframe.style.display = "block";
-  };
-
-  // Fallback mechanism with longer timeout and additional check
-  setTimeout(() => {
-    if (placeholder && iframe) {
-      // Check if iframe is actually loaded using contentWindow
-      try {
-        const iframeContent = iframe.contentWindow;
-        if (iframeContent) {
-          placeholder.style.display = "none";
-          iframe.style.display = "block";
-        }
-      } catch (error) {
-        // If cross-origin restrictions prevent checking contentWindow
-        placeholder.style.display = "none";
-        iframe.style.display = "block";
-      }
-    }
-  }, 1000); // Extended timeout to 1 seconds
-});
